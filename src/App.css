@@ -1,0 +1,172 @@
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+} */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+*,*::before,*::after{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.container{
+  max-width: 90vw;
+  margin: auto;
+}
+
+.card-container{
+  display: grid;
+  gap: 1.5rem;
+  margin: 2rem 0;
+  grid-auto-rows: minmax(100px, auto); 
+}
+
+.card{
+  position: relative;
+  border-radius: .2em;
+  overflow: hidden;
+  background-color: white;
+  align-self: start;
+}
+
+.cardPrice{
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgb(59, 198, 152);
+  padding: .5rem .75em;
+  color: white;
+  letter-spacing: 3px;
+}
+.card img{
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+
+.card-description{
+  padding: 1.5rem 1rem;
+}
+
+.card-description-name{
+  font-size: 1.25rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.card-description-desc{
+  color: grey;
+  text-align: justify;
+  margin: 1em 0 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 400;
+ 
+}
+
+.close{
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+
+
+.removeBtn{
+  width: 100%;
+  border: 1px solid #2eb080;
+  color: #3eb489;
+  background-color: white;
+  padding: .25rem 0;
+  border-radius: .25em;
+  transition: .5s;
+  margin-top: 1rem;
+}
+.removeBtn:hover{
+  background-color: #3eb489;
+  color: white;
+}
+
+.toggleBtn{
+  color: #3eb489;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.title{
+  text-align: center;
+  font-weight: 400;
+}
+.title-underline{
+  width: 100px;
+  height: .5vh;
+  border-radius: 2em;
+  background-color: #2eb080;
+  margin: 1rem auto;
+}
+
+@media  (min-width:40em) {
+  .card-container{
+    grid-template-columns: 1fr 1fr;
+  }
+  .container{
+    max-width: 85vw;
+    margin: auto;
+  }
+}
+
+@media  (min-width:60em) {
+  .card-container{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .container{
+    max-width: 80vw;
+  }
+}
+/* @media  (min-width:40em) {
+  .card-container{
+    grid-template-columns: 1fr 1fr;
+  }
+} */
